@@ -33,3 +33,16 @@
 ![Running Locally](./docs/images/Running%20Locally.png)
 
 ---
+
+## Add `limit` query parameter to the `/greetings` GET endpoint
+
+![Query Parameter](./docs/images/Greetings%20with%20Limit.png)
+
+---
+
+## Add another possible response of `500/server-error` to POST endpoint
+
+![Server Error 1 of 2](./docs/images/ServerError1.png)
+![Server Error 2 of 2](./docs/images/ServerError2.png)
+
+---

@@ -35,7 +35,7 @@ Study and use Swagger Editor to test a YAML specification of a greeter API syste
 
   - As per specification, the only currently possible response for `/greetings` POST endpoint is 200/success, add another possible response of 500/server-error along with a new Error schema consisting of the following fields:
 
-    - `code`: an integer with two possible values: 1000, 2000
+    - `code`: an integer with two possible values: `1000`, `2000`
     - `message`: a string with two possible values: `“server is too busy”`, `“greeting already exists”`
  
 Submit your modified YAML specification and a screenshot showing the new API documentation in Swagger UI reflecting above modifications.

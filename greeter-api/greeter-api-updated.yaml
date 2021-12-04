@@ -1,0 +1,114 @@
+swagger: "2.0"
+info:
+  description: "This is a sample server Greeter API."
+  version: "1.1.0"
+  title: "LewisU Greeter API"
+  contact:
+    email: "omarisa@lewisu.edu"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "greetings.lewisu.edu"
+basePath: "/v1"
+
+tags:
+- name: "greetings"
+  description: "Greetings Depot"
+  externalDocs:
+    description: "Find out more"
+    url: "http://lewisu.edu"
+
+schemes:
+- "https"
+- "http"
+
+paths:
+  /greetings:
+    get:
+      tags: 
+      - "greetings"
+      summary: "Get all greetings"
+      description: ""
+      produces:
+      - "application/json"
+      parameters:
+      - in: query
+        name: limit
+        type: integer
+        description: The maximum numbers of greetings to return
+      responses:
+        200:
+          description: "Successful response"
+          schema:
+            $ref: '#/definitions/Greetings'
+
+    post:
+      tags:
+      - "greetings"
+      summary: "Add a new greeting"
+      description: ""
+      operationId: "addGreeting"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Add a greeting"
+        required: true
+        schema:
+          $ref: "#/definitions/Greeting"
+      responses:
+        200:
+          description: "Successful response"
+          schema:
+            $ref: '#/definitions/GreetingWithId'
+        500:
+          description: "Server Error"
+          schema:
+            $ref: '#/definitions/ServerError'
+
+definitions:
+  Greeting:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+        example: "Hello Safwan"
+      from:
+        type: "string"
+        example: "Omari"
+  
+  GreetingWithId:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        example: "123"
+      name:
+        type: "string"
+        example: "Hello Safwan"
+      from:
+        type: "string"
+        example: "Omari"
+
+  Greetings:
+    type: "array"
+    items:
+      $ref: '#/definitions/GreetingWithId'
+      
+  ServerError:
+    type: "object"
+    properties:
+      code:
+        type: integer
+        enum: 
+        - 1000
+        - 2000
+      message:
+        type: string
+        enum: 
+        - 'server is too busy'
+        - 'greeting already exists'
+  

@@ -5,6 +5,7 @@ Specification and documentation of a systems Application Programming Interface (
 
 - [Deliverables](./DELIVERABLES.md)
 - [NodeJS Server: Pet Swagger](./nodejs-server)
+- [Optional Assignment: Greeter API](./greeter-api)
 
 ## Steps
 

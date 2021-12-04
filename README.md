@@ -29,7 +29,7 @@ The downloaded mock server contains a README file, follow the instructions liste
 
 ### Optional
 
-Study and use Swagger Editor to test a YAML specification of a greeter API system ( [CLICK TO DOWNLOAD](https://lewisuniversity.blackboard.com/bbcswebdav/pid-4800775-dt-content-rid-44449139_1/xid-44449139_1) ). The specification supports posting of a greeting json payload and retrieving of all greetings. Modify the specifications as follows:
+Study and use Swagger Editor to test a YAML specification of a greeter API system ( [CLICK TO DOWNLOAD](./greeter-api/greeter-api-specs.yaml) ). The specification supports posting of a greeting json payload and retrieving of all greetings. Modify the specifications as follows:
 
   - Add `limit` query parameter to the `/greetings` GET endpoint, `limit` is an integer value and represents the maximum number of greetings that can be returned by the endpoint.
 

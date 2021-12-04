@@ -43,6 +43,9 @@ with a new Error schema consisting of the following fields:
 
 #### Solution
 
+Understand describing responses from here:
+https://swagger.io/docs/specification/describing-responses/
+
 Understand `enums` from here:
 https://swagger.io/docs/specification/data-models/enums/
 
